@@ -53,6 +53,14 @@
   color: black;
   background-color: white;
 }
+.table{
+  border-radius: 10px !important;
+  margin-top: 2%;
+  margin-left: 10px;
+  -webkit-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
+  box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
+}
 @media only screen and (max-width: 800px) {
   .container {
     flex-wrap: wrap;

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
 import Doctors from "./components/Doctors";
 import Appointment from "./components/Appointment";
+import Admin from "./components/Admin";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Appointment />
           <Routes>
             <Route path="/carousel" element={<Carousel />} />
+            <Route path="/admin" element={<Admin />}/>
           </Routes>
       </Router>
     </>
