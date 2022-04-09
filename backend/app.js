@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const cors = require("cors");
+
+require("dotenv").config();
+
 mongoose
   .connect("mongodb://localhost:27017/hack6", {
     useNewUrlParser: true,
