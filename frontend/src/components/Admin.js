@@ -7,8 +7,10 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
-import "../App.css"
+import "../App.css";
+import { useNavigate } from "react-router-dom";
 const Admin = () => {
+  const history = useNavigate();
   const [data, setData] = useState();
   const getData = () => {
     axios
@@ -22,11 +24,22 @@ const Admin = () => {
       });
   };
   useEffect(() => {
-    getData();
+    const pass = window.prompt("Please Enter the password to login ?");
+    const ipass = "12345678";
+    if (pass === ipass) {
+      getData();
+    } else {
+      history("/");
+      alert("wrong passowrd");
+    }
   }, []);
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 1400, minWidth : 900 }} className="table" aria-label="simple table">
+    <TableContainer id="admin" component={Paper}>
+      <Table
+        sx={{ maxWidth: 1400, minWidth: 900 }}
+        className="table"
+        aria-label="simple table"
+      >
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
@@ -37,20 +50,23 @@ const Admin = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data && data.map((row) => (
-            <TableRow
-              key={row._id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="center">{row.email}</TableCell>
-              <TableCell align="center">{row.docName}</TableCell>
-              <TableCell align="center">{row.address}</TableCell>
-              <TableCell align="right">{row.createdAt.split("T")[0]} / {row.time}</TableCell>
-            </TableRow>
-          ))}
+          {data &&
+            data.map((row) => (
+              <TableRow
+                key={row._id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="center">{row.email}</TableCell>
+                <TableCell align="center">{row.docName}</TableCell>
+                <TableCell align="center">{row.address}</TableCell>
+                <TableCell align="right">
+                  {row.createdAt.split("T")[0]} / {row.time}
+                </TableCell>
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </TableContainer>

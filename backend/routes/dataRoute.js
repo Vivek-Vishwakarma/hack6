@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Data = require("../models/data.js");
 const nodemailer = require("nodemailer");
-const Meeting = require("google-meet-api").meet;
 require("dotenv").config();
 
 const transporter = nodemailer.createTransport({
@@ -12,6 +11,19 @@ const transporter = nodemailer.createTransport({
     pass: process.env.MAIL_PASS,
   },
 });
+
+let myVar = 20;
+
+function scheduleReset() {
+    let reset = new Date();
+    reset.setHours(24, 0, 0, 0);
+    let t = reset.getTime() - Date.now();
+    setTimeout(function() {
+        myVar=20;
+        scheduleReset();
+    }, t);
+}
+
 
 router.post("/", async (req, res) => {
   try {

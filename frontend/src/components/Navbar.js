@@ -6,7 +6,8 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#ffff" }}>
+    <AppBar position="sticky" style={{ backgroundColor: "#ffff" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -70,7 +71,9 @@ const Navbar = () => {
             >
               <MenuItem>
                 <Link
-                  to="/vflix"
+                  to="header"
+                  spy={true}
+                  offset={-180}
                   style={{ textDecoration: "none", color: "black" }}
                 >
                   <Typography className="links" textAlign="center">
@@ -78,6 +81,7 @@ const Navbar = () => {
                   </Typography>
                 </Link>
               </MenuItem>
+
               <MenuItem href="/trending">
                 <Link
                   to="/trending"
@@ -86,23 +90,29 @@ const Navbar = () => {
                   <Typography textAlign="center">Doctors</Typography>
                 </Link>
               </MenuItem>
-              <MenuItem href="/trending">
+              {/* <MenuItem>
                 <Link
-                  className="navButton"
-                  to="/"
-                  style={{ fontSize: "15px"}}
+                  to="/admin"
+                  style={{ textDecoration: "none", color: "black" }}
                 >
+                  <Typography className="links" textAlign="center">
+                    Admin
+                  </Typography>
+                </Link>
+              </MenuItem> */}
+              <MenuItem href="/trending">
+                <Link className="navButton" to="/" style={{ fontSize: "15px" }}>
                   +91 9876543212 <LocalPhoneIcon />
                 </Link>
               </MenuItem>
               <MenuItem href="/trending">
-                <Link to="/" style={{ textDecoration: "none" }}>
+                <Link to="appointment" style={{ textDecoration: "none" }}>
                   <Button
                     sx={{ my: 2, display: "block" }}
                     variant="contained"
                     color="success"
                   >
-                    Get Started &#8594;
+                    Book Appointment
                   </Button>
                 </Link>
               </MenuItem>
@@ -121,7 +131,12 @@ const Navbar = () => {
             Health Buddy
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Link to="/vflix" style={{ textDecoration: "none" }}>
+            <Link
+              to="header"
+              spy={true}
+              offset={-180}
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
@@ -129,7 +144,12 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/trending" style={{ textDecoration: "none" }}>
+            <Link
+              to="carousel"
+              spy={true}
+              offset={-180}
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
@@ -137,20 +157,50 @@ const Navbar = () => {
                 Doctors
               </Button>
             </Link>
+            <Link
+              to="reviews"
+              spy={true}
+              offset={-180}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                Reviews
+              </Button>
+            </Link>
+            {/* <Link to="/admin" style={{ textDecoration: "none" }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                Admin
+              </Button>
+            </Link> */}
             <a
               className="navButton"
               href="tel:+91 9876543212"
-              style={{ fontSize: "20px", marginTop: "15px", textDecoration: "none" }}
+              style={{
+                fontSize: "20px",
+                marginTop: "15px",
+                textDecoration: "none",
+              }}
             >
               +91 9876543212 <LocalPhoneIcon />
             </a>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link
+              to="appointment"
+              spy={true}
+              offset={-150}
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 sx={{ my: 2, display: "block" }}
                 variant="contained"
                 color="success"
               >
-                Get Started &#8594;
+                Book Appointment
               </Button>
             </Link>
           </Box>

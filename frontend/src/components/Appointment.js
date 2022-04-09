@@ -45,7 +45,7 @@ export default function Appointment() {
 
   return (
     <>
-      <Typography className="heading" variant="h4">
+      <Typography id="appointment" className="heading" variant="h4">
         Book Appointment
       </Typography>
       <ThemeProvider theme={theme}>
@@ -111,11 +111,12 @@ export default function Appointment() {
                       <MenuItem value="">
                         <em>Doctor Name *</em>
                       </MenuItem>
-                      <MenuItem value="Vivek Vishwakarma`anshubhagat66@gmail.com">
+                      <MenuItem value="Vivek Vishwakarma`vivek_vishwakarma2002@outlook.com">
                         Vivek Vishwakarma
                       </MenuItem>
-                      <MenuItem value="Moderate">Moderate</MenuItem>
-                      <MenuItem value="Low">Low</MenuItem>
+                      <MenuItem value="Anshu Bahgat`anshubhagat66@gmail.com">Anshu Bahgat</MenuItem>
+                      <MenuItem value="Hitesh Gupta`hiteshtcet2019@gmail.com">Hitesh Gupta</MenuItem>
+                      <MenuItem value="Vikas Gond`vikasgond807@gmail.com">Vikas Gond</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
 
-    <Typography className="heading" variant="h4">About</Typography>
+    <Typography id="header" className="heading" variant="h4">About</Typography>
     <Container
       className="container"
       maxWidth="lg"

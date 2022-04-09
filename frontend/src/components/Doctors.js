@@ -5,7 +5,7 @@ import { Typography } from '@mui/material'
 const Doctors = () => {
   return (
     <>
-        <Typography className="heading" variant="h4">Our Doctors</Typography>
+        <Typography id="doctor" className="heading" variant="h4">Our Doctors</Typography>
         <MyCarousel />
     </>
   )

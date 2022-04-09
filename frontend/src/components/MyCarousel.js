@@ -6,7 +6,7 @@ import car3 from "../images/car3.jpg";
 import "../App.css";
 const MyCarousel = () => {
   return (
-    <Carousel className="carContainer">
+    <Carousel id="carousel" className="carContainer">
       <Carousel.Item>
         <img className="d-block w-100 carImage" src={car1} alt="First slide" />
         <Carousel.Caption>
