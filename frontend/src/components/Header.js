@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
 import side from "../images/doc1.jpg";
 import "../App.css";
+import { Link } from "react-scroll/modules";
 const Header = () => {
   return (
     <Container
@@ -12,12 +13,16 @@ const Header = () => {
       <Box component="div" sx={{ margin: "auto 20px", width: "450px" }}>
         <article>
           <header>
-            <Typography sx={{ fontFamily: "Montserrat", fontSize: "1.6rem", fontWeight : "bold" }}>
+            <Typography
+              sx={{
+                fontFamily: "Montserrat",
+                fontSize: "1.6rem",
+                fontWeight: "bold",
+              }}
+            >
               Health Buddy .
             </Typography>
-            <Typography
-              sx={{ fontFamily: "Montserrat", fontSize: "1.3rem" }}
-            >
+            <Typography sx={{ fontFamily: "Montserrat", fontSize: "1.3rem" }}>
               Close to you. ... Close to you. ...
             </Typography>
           </header>
@@ -31,9 +36,11 @@ const Header = () => {
             Smart way to book your doctor consultant. No need to stay in queue{" "}
             <br />
             <br />
-            <Button variant="contained" color="success">
-              Get Started &#8594;
-            </Button>
+            <Link to="appointment" spy={true} offset={-180}>
+              <Button variant="contained" color="success">
+                Get Started &#8594;
+              </Button>
+            </Link>
           </Typography>
         </article>
       </Box>

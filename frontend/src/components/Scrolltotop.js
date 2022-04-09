@@ -24,7 +24,7 @@ const Scrolltotop = () => {
   return (
     <div className="top-to-btm">
       {showTopBtn && (
-        <ArrowUpwardIcon className="icon-position icon-style" onClick={goToTop} />
+        <ArrowUpwardIcon style={{fontSize : "3rem"}} className="icon-position icon-style" onClick={goToTop} />
       )}
     </div>
   );
