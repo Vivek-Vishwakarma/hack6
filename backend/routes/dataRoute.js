@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
       from: process.env.MAIL_USER,
       to: email,
       subject: `Your Appointment is booked with Dr. ${docName.split("`")[0]}`,
-      html: `<div style="border:1px solid #10bae0;">
+      html: `<div style="border:1px solid #10bae0; padding: 10px">
       <b>
           <p style="margin: 0; padding: 0;">Dear ${name},</p>
   
@@ -111,7 +111,7 @@ router.post("/", async (req, res) => {
       subject: `Hello Dr. ${
         docName.split("`")[0]
       } Appointment is booked with ${name}`,
-      html: `<div style="border:1px solid #10bae0;">
+      html: `<div style="border:1px solid #10bae0; padding: 10px">
       <b>
           <p style="margin: 0; padding: 0;">Dear ${docName.split("`")[0]},</p>
   
