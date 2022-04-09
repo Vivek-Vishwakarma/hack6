@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -16,7 +13,6 @@ import axios from "axios";
 const theme = createTheme();
 
 export default function Appointment() {
-  //   const history = useNavigate()
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -48,8 +44,8 @@ export default function Appointment() {
       <Typography id="appointment" className="heading" variant="h4">
         Book Appointment
       </Typography>
-      <ThemeProvider theme={theme}>
-        <Container className="div" component="main" maxWidth="sm">
+      <ThemeProvider  theme={theme}>
+        <Container id="appoint" className="div" component="main" maxWidth="xl" sx={{paddin: "20px 100px", display : "flex", justifyContent: "center"}}>
           <CssBaseline />
           <Box
             sx={{
@@ -58,7 +54,7 @@ export default function Appointment() {
               alignItems: "center",
             }}
           >
-            <Box component="form" onSubmit={postUser} sx={{ mt: 3 }}>
+            <Box component="form" onSubmit={postUser} sx={{ mt: 3, padding : "20px 20%" }}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <TextField

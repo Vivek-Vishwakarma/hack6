@@ -42,7 +42,7 @@
   transform: translateY(20px) translateX(-55px);
   border-radius: 30px;
 }
-.reviews{
+.reviews {
   margin-inline: 10%;
   display: flex !important;
 }
@@ -57,17 +57,69 @@
   color: black;
   background-color: white;
 }
-.table{
+.table {
   border-radius: 10px !important;
   margin-top: 2%;
   margin-inline: auto;
-  -webkit-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
-  -moz-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
-  box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
+  -webkit-box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.75) !important;
+}
+#appoint {
+  background: rgb(138, 254, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(138, 254, 255, 1) 0%,
+    rgba(254, 219, 143, 1) 100%
+  );
+}
+#about {
+  padding: 40px;
+  background: rgb(245, 149, 149);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 149, 149, 1) 11%,
+    rgba(223, 223, 255, 1) 55%,
+    rgba(228, 250, 255, 1) 100%
+  );
+}
+.reviewSec {
+  /* margin-inline: auto !important;
+   */
+  display: flex;
+  justify-content: center;
+  background: rgb(187, 102, 245);
+  background: linear-gradient(
+    90deg,
+    rgb(50, 35, 60) 0%,
+    rgba(232, 176, 176, 1) 50%,
+    rgba(255, 206, 138, 1) 100%
+  );
+}
+/* .active{
+  background-color: hsl(0, 0%, 40%);
+  color: white;
+} */
+.scrollbtn {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  bottom: 40px;
+  height: 20px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+  color: green;
 }
 @media only screen and (max-width: 800px) {
   .container {
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .header-img {
+    max-width: 400px;
+    max-height: 250px;
   }
   .heading {
     margin: 10px 0px !important;
@@ -79,7 +131,10 @@
   .heading::before {
     transform: translateY(10px) translateX(-55px);
   }
-  .reviews{
+  #about {
+    padding: 20px;
+  }
+  .reviews {
     flex-wrap: wrap;
   }
 }

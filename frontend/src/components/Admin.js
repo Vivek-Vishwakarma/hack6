@@ -9,23 +9,23 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 const Admin = () => {
   const history = useNavigate();
   const [data, setData] = useState();
-  const pass = prompt("Please Enter the password to login ?");
   const getData = () => {
     axios
-      .get("http://localhost:5000/data/admin")
-      .then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    .get("http://localhost:5000/data/admin")
+    .then((response) => {
+      setData(response.data);
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
   useEffect(() => {
+    const pass = prompt("Please Enter the password to login ?");
     console.log(pass);
     const ipass = "12345678";
     if (pass === ipass) {
@@ -37,6 +37,7 @@ const Admin = () => {
   }, []);
   return (
     <>
+    <Typography id="header" className="heading" variant="h4">All Appointments</Typography>
       <Link
         to="/"
         style={{ textDecoration: "none", display : "flex", justifyContent : "center" }}

@@ -10,6 +10,8 @@ import Admin from "./components/Admin";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Blog from "./components/Blog";
+import Scrolltotop from "./components/Scrolltotop";
 function App() {
   return (
     <Router>
@@ -19,9 +21,11 @@ function App() {
           path="/"
           element={[
             <Header/>,
+            <Scrolltotop />,
             <About />,
             <Doctors />,
             <Reviews />,
+            <Blog/>,
             <Appointment />,
             <Footer />,
           ]}

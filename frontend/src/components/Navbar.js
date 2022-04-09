@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-// import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
@@ -19,11 +18,9 @@ const Navbar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
   return (
     <AppBar position="sticky" style={{ backgroundColor: "#ffff" }}>
       <Container maxWidth="xl">
@@ -168,6 +165,19 @@ const Navbar = () => {
                 sx={{ my: 2, color: "black", display: "block" }}
               >
                 Reviews
+              </Button>
+            </Link>
+            <Link
+              to="blog"
+              spy={true}
+              offset={-180}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                Blog
               </Button>
             </Link>
             {/* <Link to="/admin" style={{ textDecoration: "none" }}>

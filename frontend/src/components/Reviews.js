@@ -14,10 +14,10 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 export default function Reviews() {
   return (
     <>
-      <Typography id="reviews" className="heading" variant="h4">
+      <Typography className="heading" variant="h4">
         Reviews
       </Typography>
-      <Container className="reviews">
+      <Container id="reviews" maxWidth="xl" className="reviews reviewSec">
         <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
           <CardMedia
             component="img"
@@ -32,7 +32,7 @@ export default function Reviews() {
             <Typography sx={{textAlign : "center"}} gutterBottom variant="h5" component="div">
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
               Lizards are a widespread group of squamate reptiles, with over
               6,000 species, ranging across all continents except Antarctica
             </Typography>
@@ -52,7 +52,7 @@ export default function Reviews() {
             <Typography sx={{textAlign : "center"}} gutterBottom variant="h5" component="div">
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
               Lizards are a widespread group of squamate reptiles, with over
               6,000 species, ranging across all continents except Antarctica
             </Typography>
@@ -72,12 +72,13 @@ export default function Reviews() {
             <Typography sx={{textAlign : "center"}} gutterBottom variant="h5" component="div">
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
               Lizards are a widespread group of squamate reptiles, with over
               6,000 species, ranging across all continents except Antarctica
             </Typography>
           </CardContent>
         </Card>
+      
       </Container>
     </>
   );
