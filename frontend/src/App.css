@@ -1,0 +1,33 @@
+.navButton{
+  margin-left: auto;
+  margin-right: 30px;
+}
+.carContainer{
+  max-width: 750px;
+  margin-inline: auto;
+  max-height: 450px;
+}
+.carImage{
+  max-width: 750px;
+  max-height: 450px;
+}
+
+.heading{
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0px;
+  position: relative;
+}
+.heading::after{
+
+}
+.heading::before{
+  
+}
+
+
+@media only screen and (max-width: 750px) {
+  .container{
+    flex-wrap: wrap;
+  }
+}
