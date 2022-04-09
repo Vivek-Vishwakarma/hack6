@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Doctors from "./components/Doctors";
 import Appointment from "./components/Appointment";
 import Admin from "./components/Admin";
+import Reviews from "./components/Reviews";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Header/>
         <Doctors />
+        <Reviews />
         <Appointment />
           <Routes>
             <Route path="/carousel" element={<Carousel />} />

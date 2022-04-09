@@ -42,6 +42,10 @@
   transform: translateY(20px) translateX(-55px);
   border-radius: 30px;
 }
+.reviews{
+  margin-inline: 10%;
+  display: flex !important;
+}
 .heading::before:first-child {
   width: 0px;
 }
@@ -56,7 +60,7 @@
 .table{
   border-radius: 10px !important;
   margin-top: 2%;
-  margin-left: 10px;
+  margin-inline: auto;
   -webkit-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
   -moz-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
   box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.75) !important;
@@ -74,5 +78,8 @@
   }
   .heading::before {
     transform: translateY(10px) translateX(-55px);
+  }
+  .reviews{
+    flex-wrap: wrap;
   }
 }

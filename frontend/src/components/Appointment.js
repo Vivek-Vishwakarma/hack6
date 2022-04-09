@@ -16,14 +16,14 @@ import axios from "axios";
 const theme = createTheme();
 
 export default function Appointment() {
-//   const history = useNavigate()
+  //   const history = useNavigate()
   const [user, setUser] = useState({
     name: "",
     email: "",
     address: "",
     docName: "",
     time: "",
-    date: ""
+    date: "",
   });
 
   const postUser = async (e) => {
@@ -43,101 +43,118 @@ export default function Appointment() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-
   return (
-    <ThemeProvider theme={theme}>
-      <Container className="div" component="main" maxWidth="sm">
-        <CssBaseline />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box component="form" onSubmit={postUser} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  autoComplete="off"
-                  name="name"
-                  required
-                  fullWidth
-                  onChange={handleChange}
-                  id="firstName"
-                  label="Name"
-                />
+    <>
+      <Typography className="heading" variant="h4">
+        Book Appointment
+      </Typography>
+      <ThemeProvider theme={theme}>
+        <Container className="div" component="main" maxWidth="sm">
+          <CssBaseline />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Box component="form" onSubmit={postUser} sx={{ mt: 3 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    autoComplete="off"
+                    name="name"
+                    required
+                    fullWidth
+                    onChange={handleChange}
+                    id="firstName"
+                    label="Name"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    onChange={handleChange}
+                    label="Email Address"
+                    name="email"
+                    type="email"
+                    autoComplete="off"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="address"
+                    onChange={handleChange}
+                    label="Address"
+                    name="address"
+                    autoComplete="off"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-helper-label">
+                      Doctor Name *
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-helper-label"
+                      id="demo-simple-select-helper"
+                      value={user.docName}
+                      fullWidth
+                      name="docName"
+                      label="Doctor Name *"
+                      onChange={handleChange}
+                    >
+                      <MenuItem value="">
+                        <em>Doctor Name *</em>
+                      </MenuItem>
+                      <MenuItem value="Vivek Vishwakarma`anshubhagat66@gmail.com">
+                        Vivek Vishwakarma
+                      </MenuItem>
+                      <MenuItem value="Moderate">Moderate</MenuItem>
+                      <MenuItem value="Low">Low</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="time"
+                    onChange={handleChange}
+                    name="date"
+                    type="date"
+                    autoComplete="off"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="time"
+                    onChange={handleChange}
+                    name="time"
+                    type="time"
+                    autoComplete="off"
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  onChange={handleChange}
-                  label="Email Address"
-                  name="email"
-                  type="email"
-                  autoComplete="off"
-                />
-              </Grid>
-              <Grid item xs={12}>
-              <TextField
-                  required
-                  fullWidth
-                  id="address"
-                  onChange={handleChange}
-                  label="Address"
-                  name="address"
-                  autoComplete="off"
-                />
-              </Grid>
-              <Grid item xs={12}>
-              <TextField
-                  required
-                  fullWidth
-                  id="docName"
-                  onChange={handleChange}
-                  label="Doctor Name"
-                  name="docName"
-                  autoComplete="off"
-                />
-              </Grid>
-              <Grid item xs={12}>
-              <TextField
-                  required
-                  fullWidth
-                  id="time"
-                  onChange={handleChange}
-                  name="date"
-                  type="date"
-                  autoComplete="off"
-                />
-              </Grid>
-              <Grid item xs={12}>
-              <TextField
-                  required
-                  fullWidth
-                  id="time"
-                  onChange={handleChange}
-                  name="time"
-                  type="time"
-                  autoComplete="off"
-                />
-              </Grid>
-            </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              onSubmit={postUser}
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Book Appointment
-            </Button>
-            
+              <Button
+                type="submit"
+                fullWidth
+                onSubmit={postUser}
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Book Appointment
+              </Button>
+            </Box>
           </Box>
-        </Box>
-      </Container>
-    </ThemeProvider>
+        </Container>
+      </ThemeProvider>
+    </>
   );
 }

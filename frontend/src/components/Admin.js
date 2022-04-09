@@ -25,8 +25,8 @@ const Admin = () => {
     getData();
   }, []);
   return (
-    <TableContainer className="table" component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="simple table">
+    <TableContainer component={Paper}>
+      <Table sx={{ maxWidth: 1400, minWidth : 900 }} className="table" aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
