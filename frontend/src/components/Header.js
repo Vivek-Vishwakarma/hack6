@@ -3,13 +3,15 @@ import "../App.css";
 import side from "../images/car1.jpg";
 const Header = () => {
   return (
+    <>
+
+    <Typography className="heading" variant="h4">Amazing Header</Typography>
     <Container
       className="container"
       maxWidth="lg"
-      sx={{ display: "flex", mt: "40px", justifyContent: "space-evenly" }}
+      sx={{ display: "flex", justifyContent: "space-evenly" }}
     >
       <Box component="div" sx={{margin: "10px 20px", width:"450px"}}>
-        <Typography className="heading" style={{textAlign: "left"}} variant="h4">Reverse Your Diabetes</Typography>
         <Typography variant="subtitle1" mt={2}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
           labore ratione, magnam fugit repellendus temporibus dolor ducimus,
@@ -30,6 +32,7 @@ const Header = () => {
         />
       </Box>
     </Container>
+    </>
   );
 };
 

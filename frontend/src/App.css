@@ -1,33 +1,70 @@
-.navButton{
+.navButton {
   margin-left: auto;
   margin-right: 30px;
 }
-.carContainer{
+.carContainer {
   max-width: 750px;
   margin-inline: auto;
   max-height: 450px;
 }
-.carImage{
+.carImage {
   max-width: 750px;
   max-height: 450px;
 }
 
-.heading{
+.heading {
   text-align: center;
   font-size: 2rem;
-  margin: 20px 0px;
-  position: relative;
+  margin: 20px 0px !important;
+  background: #121fcf;
+  background: -webkit-linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+  background: -moz-linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+  background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.heading::after{
 
+.heading::after {
+  content: "";
+  width: 50px;
+  height: 7px;
+  background: red;
+  position: absolute;
+  transform: translateY(20px) translateX(5px);
+  border-radius: 30px;
 }
-.heading::before{
-  
+.heading::before {
+  content: "";
+  width: 50px;
+  height: 7px;
+  background: rgb(0, 0, 255);
+  position: absolute;
+  transform: translateY(20px) translateX(-55px);
+  border-radius: 30px;
 }
-
-
-@media only screen and (max-width: 750px) {
-  .container{
+.heading::before:first-child {
+  width: 0px;
+}
+.carh2 {
+  color: black;
+  background-color: white;
+}
+.carp {
+  color: black;
+  background-color: white;
+}
+@media only screen and (max-width: 800px) {
+  .container {
     flex-wrap: wrap;
+  }
+  .heading {
+    margin: 10px 0px !important;
+    font-size: 1.5rem !important;
+  }
+  .heading::after {
+    transform: translateY(10px) translateX(5px);
+  }
+  .heading::before {
+    transform: translateY(10px) translateX(-55px);
   }
 }

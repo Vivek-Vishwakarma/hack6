@@ -12,7 +12,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-
 router.route("/").post(async (req, res) => {
   try {
     console.log(req.body);
