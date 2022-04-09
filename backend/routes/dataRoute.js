@@ -5,12 +5,6 @@ const Data = require("../models/data.js");
 const nodemailer = require('nodemailer');
 require("dotenv").config();
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -19,24 +13,27 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+const app = express();
+app.use(cors());
+app.use(express.json());
 
 router.route("/").post(async (req, res) => {
   try {
-    console.log("route");
-    // console.log(req.body);
     console.log(req.body);
-    const { name, email, address, docName } = req.body;
-    const newData = await Data.create({
+    const { name, email, address, docName, time, date } = await req.body;
+    const newData = await new Data({
       name,
       email,
       address,
       docName,
+      time,
+      date
     });
     const mailConfigurations = {
       from: process.env.MAIL_USER,
       to: email,
       subject: 'Your doctor Appointment is booked',
-      text: 'Hi! There, You know I am using the NodeJS ' + 'Code along with NodeMailer to send this email.'
+      html: `<h4>Your appointment with ${docName} is booked at ${time} on ${date}</h4> <br> <p>Thank You !!</p>`
     };
 
     transporter.sendMail(mailConfigurations, function (error, info) {
@@ -44,8 +41,7 @@ router.route("/").post(async (req, res) => {
       console.log('Email Sent Successfully');
       console.log(info);
     });
-
-
+    newData.save()
     console.log(newData)
     res.send({ newData: newData });
   } catch (error) {
