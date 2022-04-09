@@ -5,7 +5,7 @@ import side from "../images/car1.jpg";
 const About = () => {
   return (
     <>
-    <Typography id="header" className="heading" variant="h4">About</Typography>
+    <Typography className="heading" variant="h4">About</Typography>
     <Container
       className="container"
       maxWidth="xl"

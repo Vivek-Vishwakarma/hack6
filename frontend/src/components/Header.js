@@ -5,18 +5,29 @@ import "../App.css";
 const Header = () => {
   return (
     <Container
+      id="header"
       className="container"
       sx={{ display: "flex", mt: "40px", justifyContent: "space-evenly" }}
     >
       <Box component="div" sx={{ margin: "auto 20px", width: "450px" }}>
         <article>
           <header>
-            <h2 sx={{ fontFamily: "Montserrat" }}>Health Buddy</h2>
-            <span sx={{ fontFamily: "Montserrat" }} class="byline">
-              by The Innovators
-            </span>
+            <Typography sx={{ fontFamily: "Montserrat", fontSize: "1.6rem", fontWeight : "bold" }}>
+              Health Buddy .
+            </Typography>
+            <Typography
+              sx={{ fontFamily: "Montserrat", fontSize: "1.3rem" }}
+            >
+              Close to you. ... Close to you. ...
+            </Typography>
           </header>
-          <Typography sx={{ fontFamily: "Montserrat", maxWidth: "350px" }}>
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              maxWidth: "350px",
+              fontSize: "1.3rem",
+            }}
+          >
             Smart way to book your doctor consultant. No need to stay in queue{" "}
             <br />
             <br />

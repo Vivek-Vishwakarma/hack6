@@ -79,12 +79,34 @@ const Navbar = () => {
                 </Link>
               </MenuItem>
 
-              <MenuItem href="/trending">
+              <MenuItem>
                 <Link
-                  to="/trending"
+                  to="doctor"
+                  spy={true}
+                  offset={-180}
                   style={{ textDecoration: "none", color: "black" }}
                 >
                   <Typography textAlign="center">Doctors</Typography>
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  to="reviews"
+                  spy={true}
+                  offset={-180}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Typography textAlign="center">Review</Typography>
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  to="blog"
+                  spy={true}
+                  offset={-180}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Typography textAlign="center">Blog</Typography>
                 </Link>
               </MenuItem>
               {/* <MenuItem>

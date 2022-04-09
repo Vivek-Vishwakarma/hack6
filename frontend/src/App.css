@@ -111,18 +111,24 @@
   cursor: pointer;
   color: green;
 }
+.carddiv{
+  margin: 20px 40px;
+}
 @media only screen and (max-width: 800px) {
   .container {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
+  .carddiv{
+    margin: 10px;
+  }
   .header-img {
-    max-width: 400px;
-    max-height: 250px;
+    max-width: 300px;
+    max-height: 200px;
   }
   .heading {
-    margin: 10px 0px !important;
+    margin: 15px 0px !important;
     font-size: 1.5rem !important;
   }
   .heading::after {

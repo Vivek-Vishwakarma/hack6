@@ -13,7 +13,7 @@ export default function Blog() {
         Blogs
       </Typography>
       <Box className="reviews" sx={{flexWrap : "wrap"}}>
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300}}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -37,7 +37,7 @@ export default function Blog() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300}}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -61,7 +61,7 @@ export default function Blog() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300}}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -85,7 +85,7 @@ export default function Blog() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -109,7 +109,7 @@ export default function Blog() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -133,7 +133,7 @@ export default function Blog() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, margin: "20px 40px" }}>
+        <Card className="carddiv" sx={{ maxWidth: 300}}>
           <CardActionArea>
             <CardMedia
               component="img"
