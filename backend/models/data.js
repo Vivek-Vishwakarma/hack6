@@ -8,6 +8,9 @@ const dataSchema = new Schema({
   email: {
     type: String,
   },
+  phone:{
+    type: String,
+  },
   address: {
     type: String,
   },

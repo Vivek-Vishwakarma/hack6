@@ -87,6 +87,18 @@ export default function Appointment() {
                   <TextField
                     required
                     fullWidth
+                    id="phone"
+                    onChange={handleChange}
+                    label="Phone Number"
+                    name="phone"
+                    type="number"
+                    autoComplete="off"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
                     id="address"
                     onChange={handleChange}
                     label="Address"
