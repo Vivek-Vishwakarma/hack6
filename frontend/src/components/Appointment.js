@@ -22,7 +22,8 @@ export default function Appointment() {
     email: "",
     address: "",
     docName: "",
-    time: ""
+    time: "",
+    date: ""
   });
 
   const postUser = async (e) => {
@@ -107,7 +108,7 @@ export default function Appointment() {
                   fullWidth
                   id="time"
                   onChange={handleChange}
-                  name="time"
+                  name="date"
                   type="date"
                   autoComplete="off"
                 />

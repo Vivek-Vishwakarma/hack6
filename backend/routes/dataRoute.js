@@ -1,18 +1,43 @@
 const express = require("express");
 const router = express.Router();
 const Data = require("../models/data.js");
+const nodemailer = require('nodemailer');
+require("dotenv").config();
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS
+  }
+});
 
 
-router.post(("/"),async (req, res) => {
+router.route("/").post(async (req, res) => {
   try {
-    const { name, email, address, docName, time } = await req.body;
-    const newData = await Data.create({
+    console.log(req.body);
+    const { name, email, address, docName, time, date } = await req.body;
+    const newData = await new Data({
       name,
       email,
       address,
       docName,
-      time
+      time,
+      date
     });
+    const mailConfigurations = {
+      from: process.env.MAIL_USER,
+      to: email,
+      subject: 'Your doctor Appointment is booked',
+      html : `<h4>Your appointment with ${docName} is booked at ${time} on ${date}</h4> <br> <p>Thank You !!</p>`
+    };
+
+    transporter.sendMail(mailConfigurations, function (error, info) {
+      if (error) throw Error(error);
+      console.log('Email Sent Successfully');
+      console.log(info);
+    });
+    newData.save()
     console.log(newData)
     res.send({ newData: newData });
   } catch (error) {
@@ -21,27 +46,3 @@ router.post(("/"),async (req, res) => {
 });
 
 module.exports = router;
-
-
-// const nodemailer = require('nodemailer');
-
-// const transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth: {
-//         user: "abtechno898@gmail.com",
-//         pass: "password"
-//     }
-// });
-
-// const mailConfigurations = {
-//     from: 'abtechno898@gmail.com',
-//     to: 'anshubhagat66@gmail.com',
-//     subject: 'Sending Email using Node.js',
-//     text: 'Hi! There, You know I am using the NodeJS ' + 'Code along with NodeMailer to send this email.'
-// };
-
-// transporter.sendMail(mailConfigurations, function (error, info) {
-//     if (error) throw Error(error);
-//     console.log('Email Sent Successfully');
-//     console.log(info);
-// });
