@@ -164,6 +164,19 @@ const Navbar = () => {
               </Button>
             </Link>
             <Link
+              to="about"
+              spy={true}
+              offset={-180}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                About
+              </Button>
+            </Link>
+            <Link
               to="carousel"
               spy={true}
               offset={-180}

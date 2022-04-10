@@ -18,15 +18,15 @@ const Admin = () => {
     .get("http://localhost:5000/data/admin")
     .then((response) => {
       setData(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch((error) => {
       console.log(error);
     });
   };
   useEffect(() => {
-    const pass = prompt("Please Enter the password to login ?");
-    console.log(pass);
+    let pass = window.prompt("Please Enter the password to login ?");
+    // console.log(pass);
     const ipass = "12345678";
     if (pass === ipass) {
       getData();

@@ -33,8 +33,7 @@ export default function Reviews() {
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/>
             </Typography>
             <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            This is useful app which i got immediate solution of my problem. Doctor contact just after few minute of payment and share medicine prescription. Good service..
             </Typography>
           </CardContent>
         </Card>
@@ -53,8 +52,7 @@ export default function Reviews() {
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/>
             </Typography>
             <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            This platform is used for booking doctor appointments. Get out of rid of the queue and call the staff to book my appointment.
             </Typography>
           </CardContent>
         </Card>
@@ -73,8 +71,7 @@ export default function Reviews() {
             <StarIcon/> <StarIcon/> <StarIcon/> <StarIcon/> <StarHalfIcon/>
             </Typography>
             <Typography sx={{textAlign : "center"}} variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            I regularly visit the clinic due to my severe chronic skin ailment and now it is almost disappeared. Dr. Vikas is a very good Doctor. I would strongly recommend him.
             </Typography>
           </CardContent>
         </Card>

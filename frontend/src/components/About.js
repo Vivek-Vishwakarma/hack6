@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import "../App.css";
 import React from "react"
 import side from "../images/car1.jpg";
@@ -13,12 +13,9 @@ const About = () => {
       sx={{ display: "flex", justifyContent: "space-evenly" }}
     >
       <Box component="div" sx={{margin: "10px 20px", width:"450px"}}>
-        <Typography variant="subtitle1" mt={2}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
-          labore ratione, magnam fugit repellendus temporibus dolor ducimus,
-          doloremque laborum pariatur corrupti repellat. Modi sequi eaque non
-          doloremque quisquam, iure perspiciatis reprehenderit recusandae,
-          labore distinctio deserunt!
+        <Typography variant="subtitle1" mt={2} sx={{fontSize : "1.1rem"}}>
+          Simple to use and easy to understand, immediately book an appointment according to your schedule and need.
+          We have also integrated mailing system for both patient and doctors. Available in both offline as well as online mode. Simple and responsive UI. Wide range of well trained and experienced doctors are available.
         </Typography>
       </Box>
       <Box mt={2} component="div">

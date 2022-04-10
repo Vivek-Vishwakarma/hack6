@@ -66,7 +66,7 @@ export default function Blog() {
             <CardMedia
               component="img"
               height="180"
-              image="https://source.unsplash.com/random/1600x900/?medical,nurse,health,fitness"
+              image="https://source.unsplash.com/random/1600x900/?fitness"
               alt="green iguana"
             />
             <CardContent>
@@ -90,7 +90,7 @@ export default function Blog() {
             <CardMedia
               component="img"
               height="180"
-              image="https://source.unsplash.com/random/1600x900/?medical,nurse,health,fitness"
+              image="https://source.unsplash.com/random/1600x900/?health"
               alt="green iguana"
             />
             <CardContent>
@@ -114,7 +114,7 @@ export default function Blog() {
             <CardMedia
               component="img"
               height="180"
-              image="https://source.unsplash.com/random/1600x900/?medical,nurse,health,fitness"
+              image="https://source.unsplash.com/random/1600x900/?nurse"
               alt="green iguana"
             />
             <CardContent>
@@ -138,7 +138,7 @@ export default function Blog() {
             <CardMedia
               component="img"
               height="180"
-              image="https://source.unsplash.com/random/1600x900/?medical,nurse,health,fitness"
+              image="https://source.unsplash.com/random/1600x900/?medical"
               alt="green iguana"
             />
             <CardContent>

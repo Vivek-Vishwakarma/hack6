@@ -177,17 +177,17 @@ router.post("/", async (req, res) => {
     };
     transporter.sendMail(mailConfigurations, function (error, info) {
       if (error) throw Error(error);
-      console.log("Email Sent Successfully");
-      console.log(info);
+      // console.log("Email Sent Successfully");
+      // console.log(info);
     });
     transporter.sendMail(drmail, function (error, info) {
       if (error) throw Error(error);
-      console.log("Email Sent Successfully");
-      console.log(info);
+      // console.log("Email Sent Successfully");
+      // console.log(info);
     });
 
     newData.save();
-    console.log(newData);
+    // console.log(newData);
     res.send({ newData: newData });
   } catch (error) {
     res.send(error);
@@ -198,8 +198,8 @@ router.get("/admin", async (req, res) => {
     const allData = await Data.find({});
     res.send(allData);
   } catch (error) {
-    console.log(error);
-    res.send(error);
+    // console.log(error);
+    // res.send(error);
   }
 });
 module.exports = router;

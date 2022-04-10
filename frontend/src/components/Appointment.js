@@ -24,11 +24,11 @@ export default function Appointment() {
 
   const postUser = async (e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
     await axios
       .post("http://localhost:5000/data", user)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
       .catch((error) => {
         console.log(error);
